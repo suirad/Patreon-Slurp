@@ -7,4 +7,9 @@ defmodule PatreonSlurp do
     import Supervisor.Spec, warn: false
     Slurp.Supervisor.start_link
   end
+  def main(_args) do
+    Application.ensure_all_started(:patreon_slurp)
+    GenServer.call(:slurp, :run, 60_000)
+  end
+
 end

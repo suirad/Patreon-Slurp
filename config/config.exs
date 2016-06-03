@@ -29,7 +29,5 @@ use Mix.Config
 #
 #     import_config "#{Mix.env}.exs"
 
-config :patreon_slurp, id: ""
-config :patreon_slurp, secret: ""
 config :patreon_slurp, token: ""
-config :patreon_slurp, refresh: ""
+config :patreon_slurp, output_file: ""

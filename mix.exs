@@ -3,8 +3,9 @@ defmodule PatreonSlurp.Mixfile do
 
   def project do
     [app: :patreon_slurp,
-     version: "0.0.1",
+     version: "1.0.0",
      elixir: "~> 1.2",
+     escript: [main_module: PatreonSlurp],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -28,7 +29,7 @@ defmodule PatreonSlurp.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:httpoison, "~> 0.8.3"},
-    {:poison, "~> 2.1"}]
+    [{:httpoison, "~> 0.8.3"}, # https://github.com/edgurgel/httpoison
+    {:poison, "~> 2.1"}]       # https://github.com/devinus/poison
   end
 end
