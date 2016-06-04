@@ -18,12 +18,12 @@ To get started, follow the guide below:
         **WINDOWS(cmd):**
         set "MIX_ENV=prod" && mix escript.build
         **UNIX(bash)**
-        MIX_ENV=prod mix compile
+        MIX_ENV=prod mix escript.build
 
         **NOTE: This needs to be run after any following config changes.**
 
   6. Use the following command under the repo directory to run it:
-
+        
         escript patreon_slurp
 
   7. File output will look like the following:
