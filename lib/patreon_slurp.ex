@@ -9,7 +9,7 @@ defmodule PatreonSlurp do
   end
   def main(_args) do
     Application.ensure_all_started(:patreon_slurp)
-    GenServer.call(:slurp, :run, 60_000)
+    GenServer.call(:slurp, :run, :infinity)
   end
 
 end

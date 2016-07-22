@@ -117,6 +117,7 @@ defmodule Slurp.Application do
   end
 
   defp save_pledges(filename, pledges) do
+    File.mkdir(Path.dirname(filename))
     f = File.open!(filename, [:write, :utf8])
     final_pledges = pledges
       |> Enum.reduce([],
